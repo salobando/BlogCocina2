@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('/Blog_Cocina/IMG/Fondo_login\ _.jpeg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: rgb(53, 52, 52);
+}
+h2{
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+}
+.login-box{
+    background: rgba(255,255,255,0.75);
+    border-radius: 20px;
+    padding: 40px;
+    width: 350px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    backdrop-filter: blur(6px);
+    transition: all 0.3s ease;
+}
+.login-box:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(243, 129, 129, 0.45);
+  
+}
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+.input-group label {
+    color: #444;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ffd6dc;
+    border-radius: 10px;
+    margin-top: 5px;
+    font-size: 1em;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+
+.input-group input:focus {
+    border-color: #f38181;
+    box-shadow: 0 0 6px rgba(243, 129, 129, 0.3);
+  }
+  
+
+.btn-login {
+    width: 100%;
+    background: linear-gradient(90deg, #f38181, #fce38a);
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  
+.btn-login::after {
+    content: "";
+    position: absolute;
+    left: -50%;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.4);
+    transform: skewX(-25deg);
+    transition: left 0.6s ease;
+  }
+  
+.btn-login:hover::after {
+    left: 120%;
+  }
+  
+.btn-login:hover {
+    transform: translateY(-2px);
+  }
+  
