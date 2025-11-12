@@ -1,0 +1,185 @@
+/* Paleta de colores pastel más sólidos y contrastados (Mismos que las páginas anteriores) */
+:root {
+    --color-fondo-principal: #F8F0F3; /* Lavanda muy pálido */
+    --color-fondo-header-footer: #DCEEFB; /* Azul cielo un poco más saturado */
+    --color-acento-claro: #FAD1DE; /* Rosa pastel más vibrante */
+    --color-acento-medio: #B8E0D4; /* Verde menta más definido */
+    --color-texto-principal: #3D3D3D; /* Gris oscuro para mayor contraste */
+    --color-texto-enlace: #7B1FA2; /* Morado intenso para enlaces */
+    --color-borde-principal: #C8D6E5; /* Gris azulado para bordes generales */
+}
+
+/* Estilos Generales */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color-fondo-principal);
+    color: var(--color-texto-principal);
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+}
+
+/* Estilos del Encabezado (Header) - COPIA DE LAS PÁGINAS ANTERIORES */
+header {
+    background-color: var(--color-fondo-header-footer);
+    padding: 25px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-bottom: 2px solid var(--color-borde-principal);
+}
+
+header h1 {
+    color: var(--color-texto-principal);
+    margin: 0;
+    font-size: 2.8em;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin-left: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-texto-enlace);
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    border: 1px solid transparent;
+}
+
+nav a:hover {
+    background-color: var(--color-acento-claro);
+    color: var(--color-texto-principal);
+    border-color: var(--color-texto-enlace);
+}
+
+/* Contenido Principal (Main) - Diseño de Tarjeta Central */
+.contact-container {
+    padding: 40px 50px;
+    max-width: 700px; /* Ancho más estrecho, ideal para formularios o información de contacto */
+    margin: 40px auto;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border: 2px solid var(--color-borde-principal); /* Borde acentuado */
+    text-align: center; /* Centrar el contenido de la tarjeta */
+}
+
+/* Encabezado de Contacto */
+.contact-header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid var(--color-acento-medio);
+}
+
+.icon-circle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-acento-claro); /* Círculo pastel para el ícono */
+    border-radius: 50%;
+    font-size: 2em;
+    margin-bottom: 15px;
+    border: 2px solid var(--color-texto-enlace);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-header h2 {
+    color: var(--color-texto-enlace);
+    font-size: 2.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.contact-header p {
+    font-size: 1.1em;
+    color: var(--color-texto-principal);
+    text-align: center;
+}
+
+/* Información de Contacto */
+.contact-info {
+    text-align: left; /* Alinear la información detallada a la izquierda */
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--color-fondo-principal);
+    border-radius: 10px;
+    border: 1px solid var(--color-acento-claro);
+}
+
+.contact-info p {
+    font-size: 1.05em;
+    margin: 10px 0;
+}
+
+.contact-info strong {
+    color: var(--color-texto-enlace);
+    font-weight: 600;
+    display: inline-block; /* Asegura que el strong ocupe solo el espacio necesario */
+    width: 150px; /* Ancho fijo para alinear los dos puntos */
+}
+
+/* Información del Equipo */
+.team-info {
+    text-align: left;
+    margin-top: 30px;
+}
+
+.team-info h3 {
+    color: var(--color-texto-principal);
+    border-bottom: 2px solid var(--color-acento-claro);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+.team-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.team-info ul li {
+    background-color: var(--color-fondo-header-footer);
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 5px solid var(--color-acento-medio); /* Borde lateral de acento */
+    font-size: 1em;
+}
+
+.team-info ul li strong {
+    font-weight: 700;
+    color: var(--color-texto-enlace);
+}
+
+/* Pie de Página (Footer) - COPIA DE LAS PÁGINAS ANTERIORES */
+footer {
+    background-color: var(--color-fondo-header-footer);
+    color: var(--color-texto-principal);
+    padding: 20px 50px;
+    text-align: center;
+    border-top: 2px solid var(--color-borde-principal);
+    margin-top: 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 5px 0;
+}
