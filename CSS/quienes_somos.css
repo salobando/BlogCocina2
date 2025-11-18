@@ -8,7 +8,7 @@
     --color-texto-enlace: #7B1FA2; /* Morado intenso para enlaces */
     --color-borde-principal: #C8D6E5; /* Gris azulado para bordes generales */
 }
-
+ 
 /* Estilos Generales */
 body {
     font-family: 'Montserrat', sans-serif;
@@ -18,7 +18,7 @@ body {
     padding: 0;
     line-height: 1.7;
 }
-
+ 
 /* Estilos del Encabezado (Header) - COPIA DE inicio.css */
 header {
     background-color: var(--color-fondo-header-footer);
@@ -29,7 +29,7 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     border-bottom: 2px solid var(--color-borde-principal);
 }
-
+ 
 header h1 {
     color: var(--color-texto-principal);
     margin: 0;
@@ -37,18 +37,18 @@ header h1 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
 }
-
+ 
 nav {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
+ 
 nav li {
     margin-left: 25px;
 }
-
+ 
 nav a {
     text-decoration: none;
     color: var(--color-texto-enlace);
@@ -58,13 +58,13 @@ nav a {
     transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
     border: 1px solid transparent;
 }
-
+ 
 nav a:hover {
     background-color: var(--color-acento-claro);
     color: var(--color-texto-principal);
     border-color: var(--color-texto-enlace);
 }
-
+ 
 /* Contenido Principal (Main) */
 main {
     padding: 30px 50px;
@@ -75,19 +75,19 @@ main {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     border: 1px solid var(--color-borde-principal);
 }
-
+ 
 main section {
     margin-bottom: 40px;
     padding-bottom: 20px;
     border-bottom: 1px dashed var(--color-acento-claro); /* Separador sutil entre secciones */
 }
-
+ 
 main section:last-child {
     border-bottom: none;
     margin-bottom: 0;
     padding-bottom: 0;
 }
-
+ 
 main h2 {
     color: var(--color-texto-enlace); /* Título de sección en color de acento */
     border-bottom: 3px solid var(--color-acento-medio);
@@ -97,20 +97,20 @@ main h2 {
     font-weight: 700;
     font-size: 2.2em;
 }
-
+ 
 main p {
     font-size: 1.1em;
     line-height: 1.8;
     margin-bottom: 15px;
 }
-
+ 
 /* Sección de Presentación (Sobre Nosotros) */
 .contenedor-quienes {
     display: flex;
     gap: 30px;
     align-items: flex-start; /* Alinea los elementos al inicio */
 }
-
+ 
 .imagen-quienes {
     flex-shrink: 0; /* Evita que la imagen se encoja */
     width: 35%; /* Ancho de la imagen */
@@ -121,12 +121,12 @@ main p {
     border: 2px solid var(--color-acento-claro); /* Borde acentuado */
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
 }
-
+ 
 .presentacion p {
     flex-grow: 1;
     text-align: justify;
 }
-
+ 
 /* Sección Equipo */
 .equipo ul {
     list-style: none;
@@ -136,7 +136,7 @@ main p {
     flex-wrap: wrap; /* Para que la lista fluya */
     gap: 15px;
 }
-
+ 
 .equipo ul li {
     background-color: var(--color-acento-claro); /* Fondo pastel para cada nombre */
     color: var(--color-texto-principal);
@@ -146,11 +146,11 @@ main p {
     border: 1px solid var(--color-borde-principal);
     transition: background-color 0.3s ease;
 }
-
+ 
 .equipo ul li:hover {
     background-color: var(--color-acento-medio);
 }
-
+ 
 /* Pie de Página (Footer) */
 footer {
     background-color: var(--color-fondo-header-footer);
@@ -162,3 +162,21 @@ footer {
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
     font-size: 0.9em;
 }
+ 
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+ 
+.card:hover {
+    transform: translateY(-6px); /* se levanta un poco */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* sombra más fuerte */
+}
+.card-title {
+font-weight: bold;
+}
+ 
+ 
+.btn {
+margin-right: 5px;
+}
+ 

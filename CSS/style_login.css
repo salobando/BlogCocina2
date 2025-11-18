@@ -3,46 +3,48 @@
 body { 
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: url('../IMG/Fondo_login\ _.jpeg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    background: url('../IMG/Fondo_login _.jpeg') no-repeat center center/cover;
+    min-height: 100vh;
     color: rgb(53, 52, 52);
 }
 
-header {
-  font-size: 15px;
-  gap: .5em;
-  display: flex;
-  background-color: rgba(255,255,255,0.75);
-  border-radius: 1em;
-  padding: .5em;
-  align-items: center;
-  left: 100%;
-  font-size: 1em;
-  h1 {
-    margin: 0;
-    font-size: 1.2em;
-  }
-  nav {
-    display: flex;
-    gap: .5em;
-    li {
-      list-style: none;
-      a {
-        text-decoration: none;
-      }
-    }
-  }
+/* NAVBAR FIJA TRANSPARENTE CON EFECTO BLUR */
+.nav-blur {
+    backdrop-filter: blur(7px);
+    background: rgba(255, 255, 255, 0.85) !important;
 }
 
-h2{
+/* Marca del sitio */
+.brand-title {
     font-family: 'Great Vibes', cursive;
-    font-size: 3rem;
+    font-size: 2rem;
+    color: #f38181 !important;
 }
-.login-box{
+
+/* Hover bonito */
+.nav-link {
+    position: relative;
+    font-weight: 600;
+    color: #444 !important;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #f38181;
+    transition: 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* LOGIN BOX */
+.login-box {
     background: rgba(255,255,255,0.75);
     border-radius: 20px;
     padding: 40px;
@@ -52,39 +54,45 @@ h2{
     backdrop-filter: blur(6px);
     transition: all 0.3s ease;
 }
-.login-box:hover{
+
+.login-box:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 35px rgba(243, 129, 129, 0.45);
-  
 }
+
+h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* INPUTS */
 .input-group {
     text-align: left;
     margin-bottom: 20px;
-  }
+}
 
 .input-group label {
     color: #444;
     font-weight: 500;
-    font-size: 0.9rem;
-  }
-  
+}
+
 .input-group input {
     width: 100%;
     padding: 10px;
     border: 2px solid #ffd6dc;
     border-radius: 10px;
-    margin-top: 5px;
     font-size: 1em;
     outline: none;
     transition: all 0.3s ease;
-  }
+}
 
 .input-group input:focus {
     border-color: #f38181;
     box-shadow: 0 0 6px rgba(243, 129, 129, 0.3);
-  }
-  
+}
 
+/* BOTÓN */
 .btn-login {
     width: 100%;
     background: linear-gradient(90deg, #f38181, #fce38a);
@@ -98,8 +106,8 @@ h2{
     transition: 0.3s;
     position: relative;
     overflow: hidden;
-  }
-  
+}
+
 .btn-login::after {
     content: "";
     position: absolute;
@@ -110,13 +118,12 @@ h2{
     background: rgba(255,255,255,0.4);
     transform: skewX(-25deg);
     transition: left 0.6s ease;
-  }
-  
+}
+
 .btn-login:hover::after {
     left: 120%;
-  }
-  
+}
+
 .btn-login:hover {
     transform: translateY(-2px);
-  }
-  
+}

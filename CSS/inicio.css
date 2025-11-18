@@ -1,188 +1,72 @@
-/* Paleta de colores pastel más sólidos y contrastados */
-:root {
-    --color-fondo-principal: #F8F0F3; /* Lavanda muy pálido */
-    --color-fondo-header-footer: #DCEEFB; /* Azul cielo un poco más saturado */
-    --color-acento-claro: #FAD1DE; /* Rosa pastel más vibrante */
-    --color-acento-medio: #B8E0D4; /* Verde menta más definido */
-    --color-texto-principal: #3D3D3D; /* Gris oscuro para mayor contraste */
-    --color-texto-enlace: #7B1FA2; /* Morado intenso para enlaces */
-    --color-borde-principal: #C8D6E5; /* Gris azulado para bordes generales */
+@import url("./style.css");
+.card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
-
-/* Estilos Generales */
-body {
-    font-family: 'Montserrat', sans-serif; /* Cambiamos a una fuente más moderna */
-    background-color: var(--color-fondo-principal);
-    color: var(--color-texto-principal);
-    margin: 0;
-    padding: 0;
-    line-height: 1.7; /* Ligeramente más espacio entre líneas */
+.card-img-top {
+    height: 220px;
+    object-fit: cover;    
 }
-
-/* Encabezado y Navegación */
-header {
-    background-color: var(--color-fondo-header-footer);
-    padding: 25px 50px; /* Mayor padding */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
-    border-bottom: 2px solid var(--color-borde-principal); /* Borde acentuado */
+ 
+.btn-primary {
+    background-color: var(--boton-primario) !important;
 }
-
-header h1 {
-    color: var(--color-texto-principal);
-    margin: 0;
-    font-size: 2.8em; /* Tamaño más grande */
-    font-family: 'Playfair Display', serif; /* Fuente elegante para el título */
-    font-weight: 700;
+ 
+.nav-blur {
+    backdrop-filter: blur(7px);
+    background: rgba(255, 255, 255, 0.90) !important;
+    transition: 0.3s;
 }
-
-nav {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+ 
+.brand-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    color: #f38181 !important;
 }
-
-nav li {
-    margin-left: 25px; /* Más espacio entre ítems */
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--color-texto-enlace);
-    font-weight: 600; /* Más énfasis */
-    padding: 8px 15px; /* Mayor padding */
-    border-radius: 8px;
-    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
-    border: 1px solid transparent; /* Borde sutil por defecto */
-}
-
-nav a:hover {
-    background-color: var(--color-acento-claro);
-    color: var(--color-texto-principal);
-    border-color: var(--color-texto-enlace); /* Borde más visible al pasar el ratón */
-}
-
-/* Líneas Separadoras */
-hr {
-    border: none;
-    height: 3px; /* Borde más grueso */
-    background-color: var(--color-borde-principal); /* Color sólido para el borde */
-    margin: 30px 0; /* Más espacio */
-    opacity: 0.8;
-}
-
-/* Contenido Principal */
-main {
-    padding: 30px 50px;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #FFFFFF; /* Fondo blanco sólido para el contenido principal */
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--color-borde-principal); /* Borde acentuado */
-}
-
-main h2, main h3 {
-    color: var(--color-texto-principal);
-    border-bottom: 3px solid var(--color-acento-medio); /* Borde inferior más grueso y sólido */
-    padding-bottom: 10px;
-    margin-top: 40px;
-    font-weight: 700;
-    font-size: 2em;
-}
-
-main h3 {
-    font-size: 1.7em;
-    border-color: var(--color-acento-claro);
-}
-
-main p {
-    font-size: 1.1em; /* Texto más grande */
-    margin-bottom: 20px;
-}
-
-/* Sección de Posts (Lista de artículos) */
-main ul {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Min-width ligeramente mayor */
-    gap: 35px; /* Mayor espacio entre posts */
-    margin-top: 25px;
-}
-
-main ul li {
-    background-color: var(--color-fondo-principal); /* Fondo pastel para los posts */
-    border: 2px solid var(--color-borde-principal); /* Borde más pronunciado */
-    padding: 25px; /* Mayor padding */
-    border-radius: 12px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-main ul li:hover {
-    transform: translateY(-8px); /* Efecto de elevación más notable */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    border-color: var(--color-acento-claro); /* Borde resalta al pasar el ratón */
-}
-
-main ul li h4 {
-    color: var(--color-texto-enlace);
-    margin-top: 0;
-    font-size: 1.6em; /* Tamaño más grande */
+ 
+/* Enlaces con efecto hover */
+.nav-link {
+    position: relative;
     font-weight: 600;
-    border-bottom: 1px dashed var(--color-acento-medio); /* Borde sutil para títulos de post */
-    padding-bottom: 8px;
-    margin-bottom: 15px;
+    color: #444 !important;
 }
-
-main ul li p {
-    font-size: 1em; /* Ajustado */
-    color: var(--color-texto-principal);
+ 
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #f38181;
+    transition: 0.3s;
 }
-
-main ul li img {
+ 
+.nav-link:hover::after {
     width: 100%;
-    height: auto;
-    max-height: 220px; /* Altura máxima ligeramente mayor */
-    object-fit: cover;
-    border-radius: 8px;
-    margin-top: 15px;
-    display: block;
-    border: 1px solid var(--color-borde-principal); /* Borde para las imágenes */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-/* Pie de Página */
+ 
 footer {
-    background-color: var(--color-fondo-header-footer);
-    color: var(--color-texto-principal);
-    padding: 25px 50px;
-    text-align: center;
-    border-top: 2px solid var(--color-borde-principal); /* Borde acentuado */
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
     margin-top: 40px;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
 }
-
-footer p {
-    margin: 8px 0;
-    font-weight: normal;
-    font-size: 1em;
+ 
+footer ul {
+    padding: 0;
 }
-
-footer strong {
-    color: var(--color-texto-enlace);
-    font-size: 1.15em;
-    font-weight: 700;
-}
-
+ 
 footer li {
     list-style: none;
-    display: inline;
-    margin: 0 12px; /* Más espacio */
-    font-size: 0.95em;
-    color: var(--color-texto-principal);
+    font-size: 0.95rem;
+    margin-top: 3px;
 }
+ 
+footer p {
+    margin: 5px 0;
+    color: #333;
+}
+ 
+ 

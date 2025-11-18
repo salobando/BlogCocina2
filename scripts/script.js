@@ -9,6 +9,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     if (usuario === "Grupo6" && contraseña === "123456") {
       alert("Bienvenidos 🍰");
       window.location.href = "../Paginas/Inicio.html";
+
     } else {
       alert("Usuario o Contraseña Incorrecta ❌");
     }

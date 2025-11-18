@@ -1,37 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login | Postrecitos</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <!-- Styles CSS -->
     <link rel="stylesheet" href="CSS/style_login.css">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="container">
-        <header>
-            <h1>Postrecitos</h1>
-            <nav>
-            <li><a href="./Paginas/Inicio.html">Inicio</a></li>
-            <li><a href="./Paginas/quienes_somos.html">Quienes somos</a></li>
-            <li><a href="./Paginas/contacto.html">Contacto</a></li>
-            </nav>
-        </header>
-        <div class="login-box">
-            <h2>Bienvenido a <span>Postresitos🍰</span></h2>
-            <form id="loginForm">
-                <div class="input-group">
-                    <label for="username">Usuario</label>
-                    <input type="text" id="username" placeholder="Ingresa tu Usuario" required/>
-                </div>
-                <div class="input-group">
-                    <label for="password">Contraseña</label>
-                    <input type="password" id="password" placeholder="********" required/>
-                </div>
-                <button type="submit" class="btn-login">Iniciar Sesion</button>
-            </form>
-        </div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top nav-blur">
+  <div class="container">
+    <a class="navbar-brand brand-title" href="#">Postrecitos🍰</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="./Paginas/Inicio.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="./Paginas/quienes_somos.html">Quienes somos</a></li>
+        <li class="nav-item"><a class="nav-link" href="./Paginas/contacto.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="../login.html">Login</a></li>
+      </ul>
     </div>
-    <script src="scripts/script.js"></script>
+  </div>
+</nav>
+
+<!-- ESPACIADO PARA COMPENSAR NAVBAR FIJO -->
+<div style="height: 90px;"></div>
+
+<!-- LOGIN -->
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="login-box">
+        <h2>Bienvenido a <span>Postrecitos🍰</span></h2>
+
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="username">Usuario</label>
+                <input type="text" id="username" placeholder="Ingresa tu Usuario" required />
+            </div>
+
+            <div class="input-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" placeholder="********" required />
+            </div>
+
+            <button type="submit" class="btn-login">Iniciar Sesión</button>
+        </form>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="text-center mt-4 p-3 bg-white shadow-sm">
+  <p><strong>Owners</strong></p>
+  <ul class="list-unstyled">
+      <li>Danna Salamanca</li>
+      <li>Geidy Ponton</li>
+      <li>Sebastian Criollo</li>
+      <li>Jair Escobar</li>
+      <li>Juan Camilo Rodríguez</li>
+  </ul>
+
+  <p><strong>Correo general:</strong> blogdepostres@gmail.com</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="scripts/script.js"></script>
 </body>
 </html>

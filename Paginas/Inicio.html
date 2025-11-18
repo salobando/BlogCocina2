@@ -1,59 +1,216 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Postrecitos 🍨</title>
-    <link rel="stylesheet" href="../CSS/inicio.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inicio | Postrecitos 🍰</title>
+
+<!-- BOOTSTRAP -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+/* ==========================
+   NAVBAR
+============================ */
+.nav-blur {
+    backdrop-filter: blur(7px);
+    background: linear-gradient(90deg, #f38181cb, #fce38ac7) !important;
+    transition: 0.3s;
+}
+
+.brand-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    color: #ffffff !important;
+}
+
+.nav-link {
+    position: relative;
+    font-weight: 600;
+    color: white !important;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* ==========================
+   CARDS DE INICIO
+============================ */
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.card-title {
+    font-weight: 600;
+    color: #f38181;
+}
+
+.btn-primary {
+    background: #f38181;
+    border: none;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: #e36d6d;
+}
+
+/* ==========================
+   FOOTER
+============================ */
+footer {
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    margin-top: 40px;
+}
+
+footer li {
+    list-style: none;
+    font-size: 0.95rem;
+    margin-top: 3px;
+}
+
+footer p {
+    margin: 5px 0;
+    color: #333;
+}
+
+/* ESPACIADO PARA QUE EL NAV NO TAPE EL CONTENIDO */
+.header-space {
+    height: 120px;
+}
+
+</style>
 </head>
+
 <body>
-    <header>
-        <h1>Postrecitos</h1>
-        <nav>
-          <li><a href="./quienes_somos.html">Quienes somos</a></li>
-          <li><a href="./contacto.html">Contacto</a></li>
-          <li><a href="../login.html">Login</a></li>
-        </nav>
-    </header>
-     <main>
-    <h2>Bienvenido a mi blog</h2>
-    <p>En este sitio puedes ver nuestras recetas de postres.</p>
-    <ul>
-      <li>
-        <h4>Cómo preparar postres fáciles en casa</h4>
-        <p>Aprende recetas faciles para endulzar tu comida.</p>
-        <img src="../IMG/tartas-sin-horno-fáciles.jpg" alt="Torta">
-      </li>
 
-      <li>
-        <h4>Postres frios para que te refresques</h4>
-        <p>Aprende a hacer helados</p>
-        <img src="../IMG/images.jpg" alt="helados">
-      </li>
+<!-- ==========================
+     NAVBAR
+============================ -->
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top nav-blur">
+  <div class="container">
+    <a class="navbar-brand brand-title" href="#">Postrecitos🍰</a>
 
-      <li>
-        <h4>Decora tus postres</h4>
-        <p>Usa lo que este a tu alcance</p>
-        <img src="../IMG/450_1000.jpg" alt="Decoracion">
-      </li>
-    </ul>
-  </main>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <footer>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="Inicio.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="quienes_somos.html">Quienes somos</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="../login.html">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="header-space"></div>
+
+<!-- ==========================
+     CONTENIDO PRINCIPAL
+============================ -->
+<main class="container my-5">
+
+  <div class="text-center mb-5">
+    <h2 class="fw-bold" style="color:#f38181;">Bienvenido a nuestro blog</h2>
+    <p class="text-muted">Aquí podrás encontrar recetas, tips y postres increíbles.</p>
+  </div>
+
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img src="../IMG/tartas-sin-horno-fáciles.jpg" class="card-img-top" alt="Postre 1">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Postres fáciles sin horno</h4>
+          <p class="card-text">Recetas rápidas y deliciosas que podrás preparar en minutos.</p>
+          <div class="mt-auto">
+            <a href="#" class="btn btn-primary w-100">Saber más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img src="../IMG/images.jpg" class="card-img-top" alt="Postre 2">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Postres fríos refrescantes</h4>
+          <p class="card-text">Perfectos para días de calor o para disfrutar con la familia.</p>
+          <div class="mt-auto">
+            <a href="#" class="btn btn-primary w-100">Saber más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img src="../IMG/450_1000.jpg" class="card-img-top" alt="Postre 3">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Decoración creativa</h4>
+          <p class="card-text">Aprende a decorar tus postres con ingredientes simples.</p>
+          <div class="mt-auto">
+            <a href="#" class="btn btn-primary w-100">Saber más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- ==========================
+     FOOTER
+============================ -->
+<footer class="text-center">
     <p><strong>Owners</strong></p>
-    
-      <li>Danna Salamanca</li>
-      <li>Geidy Ponton</li>
-      <li>Sebastian Criollo</li>
-      <li>Jair Escobar</li>
-      <li>Juan Camilo Rdoriguez</li>
-    
-    <p><strong>Correo general:</strong> blogdepostres@gmail.com</p>
-  </footer>
 
-    
+    <ul class="list-unstyled">
+        <li>Danna Salamanca</li>
+        <li>Geidy Ponton</li>
+        <li>Sebastian Criollo</li>
+        <li>Jair Escobar</li>
+        <li>Juan Camilo Rodríguez</li>
+    </ul>
+
+    <p><strong>Correo general:</strong> blogdepostres@gmail.com</p>
+</footer>
+
+<!-- BOOTSTRAP JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
-</html>             
-=======
-<h1>Hola</h1>
->>>>>>> Stashed changes
+</html>
+

@@ -1,20 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Postrecitos - Quienes Somos</title>
     <link rel="stylesheet" href="../CSS/quienes_somos.css">
-</head>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        /* NAVBAR */
+ 
+        .nav-blur {
+    backdrop-filter: blur(7px);
+    background: linear-gradient(90deg, #f38181cb, #fce38ac7) !important;
+    transition: 0.3s;
+}
 
+.brand-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    color: #ffffff !important;
+}
+
+.nav-link {
+    position: relative;
+    font-weight: 600;
+    color: white !important;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* ==========================
+   CARDS DE INICIO
+============================ */
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.card-title {
+    font-weight: 600;
+    color: #f38181;
+}
+
+.btn-primary {
+    background: #f38181;
+    border: none;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: #e36d6d;
+}
+
+/* ==========================
+   FOOTER
+============================ */
+footer {
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    margin-top: 40px;
+}
+
+footer li {
+    list-style: none;
+    font-size: 0.95rem;
+    margin-top: 3px;
+}
+
+footer p {
+    margin: 5px 0;
+    color: #333;
+}
+
+/* ESPACIADO PARA QUE EL NAV NO TAPE EL CONTENIDO */
+.header-space {
+    height: 120px;
+}
+ 
+        /* FOOTER */
+ 
+        footer {
+ 
+            background: #ffffff;
+ 
+            padding: 20px;
+ 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+ 
+            margin-top: 40px;
+ 
+        }
+ 
+        footer ul {
+ 
+            padding: 0;
+ 
+        }
+ 
+        footer li {
+ 
+            list-style: none;
+ 
+            font-size: 0.95rem;
+ 
+            margin-top: 3px;
+ 
+        }
+ 
+        footer p {
+ 
+            margin: 5px 0;
+ 
+            color: #333;
+ 
+        }
+    </style>
+</head>
+ 
 <body>
     <header>
-        <h1>Postrecitos</h1>
-        <nav>
-          <li><a href="./Inicio.html">Inicio</a></li>
-          <li><a href="./contacto.html">Contacto</a></li>
-          <li><a href="../login.html">Login</a></li>
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top nav-blur">
+            <div class="container">
+                <a class="navbar-brand brand-title" href="#">Postrecitos🍰</a>
+ 
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+ 
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="./Paginas/Inicio.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./Paginas/quienes_somos.html">Quienes somos</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="./Paginas/contacto.html">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../login.html">Login</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
@@ -38,7 +185,7 @@
                     sencillas y pensadas para cualquier cocina, al alcance de todos.
                 </p>
             </div>
-
+ 
         </section>
         <section class="mision-vision">
             <h2>Misión</h2>
@@ -46,7 +193,7 @@
                 Inspirar a las personas a disfrutar el arte de la repostería,
                 ofreciendo contenido de calidad y recetas fáciles de seguir.
             </p>
-
+ 
             <h2>Visión</h2>
             <p>
                 Ser el blog de postres más querido por los amantes del dulce,
@@ -58,22 +205,96 @@
             <p>
                 Detrás de cada receta seleccionamos para ti, existe un gran equipo de trabajo conformado por:
                 <br>
-            <ul>
-                <li>Sebastian Criollo</li>
-                <li>Juan Camilo Rodriguez </li>
-                <li>Geidy Ponton</li>
-                <li>Jair Escobar</li>
-                <li>Danna Salamanca</li>
-            </ul>
+            <div class="row g-4">
+                <!-- Sebastian -->
+                <div class="col-6 col-sm-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Sebastian Criollo</h5>
+                            <br>
+                            <p class="card-text">
+                                Responsable de transformar los diseños en una página web funcional,
+                                implementando las tarjetas, botones y secciones de postres con HTML, CSS y JavaScript.
+                            </p>
+                            <a href="#" class="btn btn-primary btn-sm" target="_blank">GitHub</a>
+                            <a href="#" class="btn btn-outline-primary btn-sm" target="_blank">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Jair -->
+                <div class="col-6 col-sm-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Jair Escobar</h5>
+                            <br>
+                            <p class="card-text">
+                                Diseñó la estructura del servidor y la lógica para gestionar recetas,
+                                usuarios y comentarios, garantizando rapidez y buen funcionamiento.
+                            </p>
+                            <br>
+                            <a href="#" class="btn btn-primary btn-sm" target="_blank">GitHub</a>
+                            <a href="#" class="btn btn-outline-primary btn-sm" target="_blank">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Geidy -->
+                <div class="col-6 col-sm-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Geidy Ponton</h5>
+                            <br>
+                            <p class="card-text">
+                                Evaluó toda la plataforma, detectando errores y verificando que cada
+                                sección funcione perfectamente para ofrecer una experiencia de usuario impecable.
+                            </p>
+                            <a href="#" class="btn btn-primary btn-sm" target="_blank">GitHub</a>
+                            <a href="#" class="btn btn-outline-primary btn-sm" target="_blank">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Danna -->
+                <div class="col-6 col-sm-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Danna Salamanca</h5>
+                            <br>
+                            <p class="card-text">
+                                Encargada de crear la interfaz visual y la experiencia de usuario,
+                                asegurando que la navegación por las recetas de postres sea clara, atractiva y
+                                agradable.
+                            </p>
+                            <br>
+                            <a href="https://github.com/salobando" class="btn btn-primary btn-sm"
+                                target="_blank">GitHub</a>
+                            <a href="https://www.linkedin.com/in/danna-sofia-salamanca-obando-desarrolladora-fullstack/"
+                                class="btn btn-outline-primary btn-sm" target="_blank">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <br>
             Quienes trabajan con dedicación para brindarte lo mejor de la repostería.
             </p>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2025 Blog de Postres | Todos los derechos reservados</p>
+ 
+    <!-- FOOTER -->
+    <footer class="text-center">
+        <p><strong>Owners</strong></p>
+ 
+        <ul class="list-unstyled">
+            <li>Danna Salamanca</li>
+            <li>Geidy Ponton</li>
+            <li>Sebastian Criollo</li>
+            <li>Jair Escobar</li>
+            <li>Juan Camilo Rodríguez</li>
+        </ul>
+ 
+        <p><strong>Correo general:</strong> blogdepostres@gmail.com</p>
     </footer>
 </body>
-
+ 
 </html>
