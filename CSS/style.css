@@ -1,0 +1,15 @@
+:root {
+    /* ------------------Paleta principal */
+    --rosa-claro: #FDE2E4;
+    --rosa: #FAD2E1;
+    --verde-menta: #E2ECE9;
+    --azul-claro: #BEE1E6;
+    --amarillo-pastel: #F6F7D7;
+
+    /* ------------------Colores generales */
+    --texto-oscuro: #2E1E0F;
+    --blanco: #ffffff;
+
+    /* -----------------Tipografías */
+    --fuente-principal: 'Poppins', sans-serif;
+}
